@@ -47,39 +47,37 @@
     {{/title}}
 
     {{$body}}
-        <form class="mform tiny_filterws_form">
+        <form class="tiny_filterws_form">
 
 {{# haspredefinedfilters }}
-            <div class="form-group mb-1">
+            <div class="mb-2">
                 <label class="w-100" for="{{elementid}}_tiny_filterws_predefined">{{#str}} predefined, tiny_filterws {{/str}}</label>
                 <div class="input-group input-append w-100">
-                    <select id="{{elementid}}_tiny_filterws_predefined" class="custom-select tiny_filterws_predefined">
+                    <select id="{{elementid}}_tiny_filterws_predefined" class="form-select tiny_filterws_predefined">
                         {{#predefinedfilters}}
                             <option value="{{index}}">{{name}}</option>
                         {{/predefinedfilters}}
                     </select>
-                    <span class="input-group-append">
-                        <button class="btn btn-secondary tiny_filterws_apply_predefined" type="button">{{#str}} apply, tiny_filterws {{/str}}</button>
-                    </span>
+                    <button class="btn btn-secondary tiny_filterws_apply_predefined" type="button">{{#str}} apply, tiny_filterws {{/str}}</button>
                 </div>
             </div>
 {{/ haspredefinedfilters }}
 
-            <div class="form-inline mb-1">
+            <div class="mb-2 d-flex flex-wrap align-items-center gap-2">
                 <label for="{{elementid}}_tiny_filterws_origin">
                     {{#str}} origin, tiny_filterws {{/str}}
                     {{#originhelpicon}}
                         {{> core/help_icon }}
                     {{/originhelpicon}}
                 </label>
-                <select id="{{elementid}}_tiny_filterws_origin" class="custom-select tiny_filterws_origin">
+                <select id="{{elementid}}_tiny_filterws_origin" class="form-select tiny_filterws_origin">
                     <option value="web">{{#str}} originweb, tiny_filterws {{/str}}</option>
                     <option value="ws">{{#str}} originws, tiny_filterws {{/str}}</option>
                     <option value="any">{{#str}} originany, tiny_filterws {{/str}}</option>
                 </select>
             </div>
 
-            <div class="form-group mb-1">
+            <div class="mb-2">
                 <label for="{{elementid}}_tiny_filterws_useragent">
                     {{#str}} filteruseragent, tiny_filterws {{/str}}
                     {{#filteruseragenthelpicon}}
