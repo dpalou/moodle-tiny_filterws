@@ -3,6 +3,8 @@ TinyMCE button for WebService filter plugin
 
 This plugin makes it easier to include the WebService filter tags in the content while using the TinyMCE editor. It will add a new button in the TinyMCE toolbar (and also a new option in the Insert menu) to add these tags.
 
+The main branch of the repository is meant to be used in Moodle 5.0 or newer. If you're using a Moodle 4.X site please use the code in the MOODLE_4X_STABLE branch.
+
 # To Install it manually #
 
 - Unzip the plugin in the moodle .../lib/editor/tiny/plugins/ directory.

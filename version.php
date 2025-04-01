@@ -24,11 +24,11 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2022122101;       // The current plugin version (Date: YYYYMMDDXX).
-$plugin->requires  = 2022112800;       // Requires this Moodle version.
+$plugin->version   = 2022122102;       // The current plugin version (Date: YYYYMMDDXX).
+$plugin->requires  = 2025041400;       // Requires this Moodle version.
 $plugin->component = 'tiny_filterws';  // Full name of the plugin (used for diagnostics).
 $plugin->maturity  = MATURITY_STABLE;  // Maturity level.
-$plugin->release   = '1.0.0';
-$plugin->dependencies = array(
+$plugin->release   = '1.0.1';
+$plugin->dependencies = [
     'filter_ws'  => 2019011800,
-);
+];
