@@ -29,7 +29,16 @@ import * as Configuration from './configuration';
 import * as Options from './options';
 
 // Setup the Filter WS Plugin to add a button and menu option.
-export default new Promise(async(resolve) => {
+export default new Promise((resolve) => {
+    setup(resolve);
+});
+
+/**
+ * Setup the Filter WS Plugin to add a button and menu option.
+ *
+ * @param {Function} resolve Callback to resolve the promise.
+ */
+async function setup(resolve) {
     const [
         tinyMCE,
         setupCommands,
@@ -54,4 +63,4 @@ export default new Promise(async(resolve) => {
 
     // Resolve the Filter WS Plugin and include configuration.
     resolve([`${component}/plugin`, Configuration]);
-});
+}

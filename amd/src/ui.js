@@ -27,9 +27,8 @@ import Selectors from './selectors';
 import {
     get_strings as getStrings,
 } from 'core/str';
-import Modal from 'tiny_filterws/modal';
+import FilterWSModal from 'tiny_filterws/modal';
 import ModalEvents from 'core/modal_events';
-import ModalFactory from 'core/modal_factory';
 
 let openingSelection = null;
 let helpStrings = null;
@@ -90,8 +89,7 @@ const getHelpStrings = async () => {
 };
 
 const displayDialogue = async(editor, data = {}) => {
-    const modal = await ModalFactory.create({
-        type: Modal.TYPE,
+    const modal = await FilterWSModal.create({
         templateContext: await getTemplateContext(editor, data),
     });
     modal.show();

@@ -22,11 +22,9 @@
  */
 
 import Modal from 'core/modal';
-import ModalRegistry from 'core/modal_registry';
 
-const FilterWSModal = class extends Modal {
+export default class FilterWSModal extends Modal {
     static TYPE = 'tiny_filterws/modal';
-
     static TEMPLATE = 'tiny_filterws/modal';
 
     registerEventListeners() {
@@ -37,8 +35,12 @@ const FilterWSModal = class extends Modal {
         this.registerCloseOnSave();
         this.registerCloseOnCancel();
     }
-};
 
-ModalRegistry.register(FilterWSModal.TYPE, FilterWSModal, FilterWSModal.TEMPLATE);
+    configure(modalConfig) {
+        modalConfig.show = true;
+        modalConfig.large = true;
+        modalConfig.removeOnClose = true;
 
-export default FilterWSModal;
+        super.configure(modalConfig);
+    }
+}
