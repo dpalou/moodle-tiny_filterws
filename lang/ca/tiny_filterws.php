@@ -26,6 +26,7 @@ $string['addfilterws'] = 'Afegir etiqueta de Filtre de Serveis web';
 $string['apply'] = 'Aplicar';
 $string['filteruseragent'] = 'Filtrar per User Agent';
 $string['filteruseragent_help'] = 'Si s\'introdueix algun valor, el contingut sel·leccionat només es mostrarà si el User Agent conté aquest valor. El valor introduït es convertirà en una expressió regular.';
+$string['filterws:use'] = 'Utilitzar TinyMCE FilterWS';
 $string['insert'] = 'Introduir';
 $string['insertfilterws'] = 'Introduir filtre de Serveis Web';
 $string['origin'] = 'Origen';
